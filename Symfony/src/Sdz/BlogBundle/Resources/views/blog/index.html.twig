@@ -1,0 +1,37 @@
+{# src/Sdz/BlogBundle/Resources/views/Blog/index.html.twig #}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bienvenue sur ma première page avec le Site du Zéro !</title>
+  </head>
+  <body>
+   <h1 style="color:red">Hello {{ nom|upper }}  !</h1>
+
+    <p>
+      Le Hello World est un grand classique en programmation.
+      Il signifie énormément, car cela veut dire que vous avez
+      réussi à exécuter le programme pour accomplir une tâche simple :
+      afficher ce hello world !
+    </p>
+	
+	{% if membre.age < 12 %}
+  Il faut avoir 12 ans pour ce film.
+{% elseif membre.age < 18 %}
+  OK bon film.
+{% else %}
+  Un peu vieux pour voir ce film non ?
+{% endif %}
+
+
+<ul>
+  {% for membre in liste_membres %}
+    <li>{{ membre.pseudo }}</li>
+  {% else %}
+    <li>Pas d'utilisateur trouvé.</li>
+  {% endfor %}
+</ul>
+	
+	<footer>Responsable du site : {{ webmaster }}.</footer>
+  </body>
+</html>

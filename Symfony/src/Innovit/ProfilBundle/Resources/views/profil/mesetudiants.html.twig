@@ -1,0 +1,43 @@
+<script  src="{{asset("scripts/script_messages.js")}}" > </script>
+	
+	
+	<div id="div_messages" class="" style="">
+	<div class="prog_chaque_matrs" id="" style="">
+تلامذتي
+</div>
+		
+		<div id="conseils_prof" class="" style="">
+		<div class="" id="Conseils_prof_titre" style="">
+			لائحة تلامذتي
+		</div>	
+		<div class="" id="consls_prof" style="">
+			{% for i in 1..16 %}	
+	<div id="consl_prof{{i}}" class="" style="">
+		<div class="entete_mes_etudiants" style="">
+			
+			
+		    <div class="evolution_mes_etudiants">
+				<div class="bar-percentage_pr">التقدم</div>
+				<div id="bar_pr-{{i}}" class="bar-main-container_pr">
+						<div id="bar_pr_{{i}}" class="bar_pr a1"  style="width:30px"></div>
+				</div>
+			</div>
+			
+			<div class="details_mes_etudiants">
+				<div class="nom_mes_etudiants" style="">سمير نبيل</div>
+				<div class="bar-percentage_pr">السادس ابتدائي</div>
+				
+				<div class="Retirer_de_mes_etudiants" title="" style="">حذف من تلامذتي</div>
+			</div>
+			
+			<div class="image_mes_etudiants" style=""><img id="" src="{{asset("images/user_icon.png")}}" style="width:100%"/></div>
+		</div >
+		
+	</div>
+	{% endfor %}
+			
+		</div>
+	
+	</div>
+	
+<script  src="{{asset("scripts/script_mesetudiant.js")}}" > </script>

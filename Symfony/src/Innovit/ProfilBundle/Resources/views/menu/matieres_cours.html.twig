@@ -1,0 +1,13 @@
+{% set i=0 %}
+{% for m in menu %}	
+	
+	<div id="matiere_{{i}}" style="" class="matieres b">
+		<div class="wrap">
+			<div id="nom_matiere_{{i}}" class="nom_mat"  onclick="charger({{i}})" > {{ m.nom }} </div>
+			
+		</div>
+		<div id="triangle_{{i}}" class="tri" style=""></div>
+	</div>
+{% set i=i+1 %}		
+	
+{% endfor %}

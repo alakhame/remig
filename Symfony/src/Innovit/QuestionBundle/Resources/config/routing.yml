@@ -1,0 +1,3 @@
+innovit_question_pick10:
+    pattern:  questions/pick/{id}
+    defaults: { _controller: InnovitQuestionBundle:Question:pick }

@@ -1,0 +1,60 @@
+<script  src="{{asset("scripts/script_messages.js")}}" > </script>
+	
+	
+	<div id="div_messages" class="" style="">
+	<div class="prog_chaque_matrs" id="" style="">
+الإلتحاق بأستاذ
+</div>
+		
+		<div id="conseils_prof" class="" style="">
+
+		<div class="" id="consls_prof" style="margin-top:40px">
+		
+			<div class="dem-rej" class="" style="">
+		
+		
+		<div class="details_demande_dajout">
+		<div id="btn_dem-rej" style="">
+		<input  style="" value="أرسل"  placeholder="أرسل " style="" type="submit" ></input>
+		</div>
+		
+		<div class="dem-rej_inputg" style="width:450px;margin-right:8px">
+		<input class="dem-rej_input" style=""  placeholder="أرسل طلب الإلتحاق بأستاذ" type="text" ></input></br> 
+		</div>
+		
+		
+		
+		</div>
+		<div class="image_demande" style=""><img id="" src="{{asset("images/groupe.png")}}" style="width:100%"/></div>
+	    </div>
+		
+		
+		
+		
+			{% for i in 1..5 %}	
+	<div id="consl_prof{{i}}" class="" style="">
+		<div class="entete_demande_dajout" style="">
+			
+			<div class="details_demande_dajout">
+				<div class="nom_demande_dajout" style="color:red">سعيد التال</div>
+				<div class="bar-percentage_pr">السادس إبتدائي</div>
+				
+				<div class="" title="" style="">مجموعة مدارس يحيى الكدالي</div>
+			</div>
+			<div class="image_demande" style=""><img id="" src="{{asset("images/user_icon.png")}}" style="width:100%"/></div>
+		    <div class="evolution_demande_dajout">
+				<div class="Accepter_daj">قبول الدعوة</div>
+	            <div class="Rejeter_daj">رفض الدعوة</div>
+			</div>
+			
+			
+		</div >
+		
+	</div>
+	{% endfor %}
+			
+		</div>
+	
+	</div>
+	
+<script  src="{{asset("scripts/script_mesetudiant.js")}}" > </script>

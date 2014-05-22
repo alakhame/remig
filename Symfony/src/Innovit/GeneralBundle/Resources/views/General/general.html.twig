@@ -1,0 +1,33 @@
+{% extends 'InnovitGeneralBundle:General:Layoutgeneral.php.twig' %}
+{%block corp%}
+		<div id="div_globale">	
+			{% block milieu%}
+			
+			{%endblock%}
+			<div id="inscription" class="" style="">
+
+				
+				<div id="video" style="">
+				   <iframe width="100%" height="220" src="//www.youtube.com/embed/Yim4--J44gk?rel=0" frameborder="0" allowfullscreen></iframe>
+				</div>	
+				
+
+								
+				<div id="insc" class="" style="">
+					<div id="insc_titre1" style="">مرحبا بك,املك حسابك الخاص الآن</div>
+					<div id="insc_titre2" style="">التسجيل</div>		  
+			
+				<div id="inputs" class="" style="opacity:1">
+				 {{ render(controller('FOSUserBundle:Registration:register')) }}
+				</div>
+		
+				</div>
+				<div id="video" style="">
+				<img class="" src="{{asset("images/video.png")}}" style=""/>
+				</div>	
+				
+			</div>	
+		</div>
+		
+	
+{% endblock %}

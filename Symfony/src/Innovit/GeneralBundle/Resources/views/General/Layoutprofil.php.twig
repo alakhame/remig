@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html id="" class="" lang="ar">
+
+	<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="{{asset("css/css.css")}}" type="text/css" media="screen" />
+	
+	</head>
+	 
+	<body class="" style="" onscroll="scroll();" >
+	 
+        <div id="Entete" style="">
+		<div id="imag_back_ground" style="">
+				  
+	     </div> 
+		
+			<div class="box " style="">
+			
+				 <div id="logo" style="">
+				    <img id="logo_image" src="{{asset("images/logo.png")}}" style=""/>
+			     </div> 
+				 <div id="grand_titre" style="">
+				    SELF SCHEDULE COATCHING
+			     </div>  
+               				 
+			</div>   
+			
+<div id="barreuser" style="">
+	<div id="menu_a" style="">	
+	<a id="menu_a_4" href="{{path('innovit_general_homepage',{ name:"liensutiles"})}}"><div id="menu_4" style="" >مواقع مفيدة</div></a>
+		
+	<a id="menu_a_3" href="{{path('innovit_general_homepage',{ name:"flashactus"})}}"><div id="menu_3" style="">مستجدات</div></a>
+	
+	<a id="menu_a_2" href="{{path('innovit_general_homepage',{ name:"qsnous"})}}"><div id="menu_2" style="" >من نحن؟</div></a>
+	
+	<a id="menu_a_1" href="{{path('innovit_general_homepage',{ name:"Accueil"})}}"><div id="menu_1" style="" > 
+	<div id="img_acc" style="" ><img src="{{asset("images/accueil_rond.png")}}" id="img_acc" style="height:100%;"/></div>
+	الرئسية</div></a>
+	<a id="" href="{{path('innovit_general_homepage',{ name:"login"})}}"><div id="sing_in" style="" >تسجيل الدخول</div></a>
+		
+</div>
+
+</div>
+
+
+
+		</div>       
+		<div id="corp_profil" style=""> 
+		{% block corp %}
+		
+		{% endblock %}
+		</div>
+		<div id="footer" style="">
+		<div id="images_footer">
+		<div id="innovit" class="footer_image" style="">
+		<img id="logo_image" src="{{asset("images/innovIT_logo.png")}}" style="width:100%"/>
+        </div>
+        <div id="inpt" class="footer_image" style="">
+		<img id="logo_image" src="{{asset("images/logoINPT.png")}}" style="width:100%"/>
+        </div>
+		</div>			
+		
+		<div id="text_footer">
+		Ce site est développé dans le cadre du concours Innovit 2014<br>
+		Equipe de l'Institut National des Postes et télécommunication
+		</div>			
+		
+		
+        </div>
+	<script  src="{{asset("scripts/script_barre.js")}}" > </script>
+				
+	</body>
+</html>

@@ -1,0 +1,35 @@
+{% set i=0 %}
+{% for p in profs %}	
+	<div id="consl_prof{{i}}" class="" style="">
+	<div class="entete_consl_prof" style="">
+	<div class="image_consl_prof" style=""><img id="" src="{{asset("images/user_icon.png")}}" style="width:100%"/></div>
+	<div class="nom_consl_prof" style="">De: {{ p.nom }}</div>
+	<div id="afficher_consls{{i}}" class="btn_affich_consl_prof" style="" onclick="javascript:afficherlemessage_envoyer({{i}})">lire les conseils</div>
+	<div id="masquer_consls{{i}}" class="btn_masqu_consl_prof" style="" onclick="javascript:masquerlemessage_envoyer({{i}})">masquer</div>
+	<div class="effacer_ce_message" title="Effacer ce message" style="">Effacer</div>
+	</div >
+	<div id="contenu_consl_prof{{i}}" class="contenu_consl_prof" style="">
+	<div class="tri_consl_prof" style=""></div>
+	<div class="text_consl_prof"  id="text_consl_prof{{i}}"  style="">
+	<span>conseils</span><br>
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	</div>
+	<div class="ligne_separation" id="ligne_separation{{i}}"></div>
+	<div class="pcs_jnts_consl_prof"  id="text_consl_prof{{i}}"  style="">
+	<span>pièces jointes</span><br>
+	</div>
+	
+	
+	
+	
+	</div>
+	</div>
+	{% set i=i+1 %}
+{% endfor %}

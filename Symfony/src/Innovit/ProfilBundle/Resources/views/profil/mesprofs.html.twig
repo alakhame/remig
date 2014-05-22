@@ -1,0 +1,49 @@
+<script  src="{{asset("scripts/script_messages.js")}}" > </script>
+	
+	
+	<div id="div_messages" class="" style="">
+	<div class="prog_chaque_matrs" id="" style="">
+أساتذتي
+</div>
+
+		<div id="conseils_prof" class="" style="">
+		<div class="" id="Conseils_prof_titre" style="">
+			:نصائح أساتذتي
+		</div>	
+		<div class="" id="consls_prof" style="">
+			{% for i in 1..16 %}	
+	<div id="consl_prof{{i}}" class="" style="">
+	<div class="entete_consl_prof" style="">
+	<div id="afficher_consls{{i}}" class="btn_affich_consl_prof" style="" onclick="javascript:afficherlemessage_envoyer({{i}})">إقرأ النصائح</div>
+	<div id="masquer_consls{{i}}" class="btn_masqu_consl_prof" style="" onclick="javascript:masquerlemessage_envoyer({{i}})">إخفاء</div>
+	<div class="nom_consl_prof" style="">محمد الفلااغ</div>
+	<div class="image_consl_prof" style=""><img id="" src="{{asset("images/user_icon.png")}}" style="width:100%"/></div>
+	<div class="effacer_ce_message" title="Effacer ce message" style="">مسح</div>
+	</div >
+	<div id="contenu_consl_prof{{i}}" class="contenu_consl_prof" style="">
+	<div class="tri_consl_prof" style=""></div>
+	
+	
+	<div class="text_consl_prof"  id="text_consl_prof{{i}}"  style="">
+	<span>النصائح</span><br>
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	</div>
+	
+	
+	
+	</div>
+	</div>
+	{% endfor %}
+			
+		</div>
+	
+	</div>
+	
+<script  src="{{asset("scripts/script_consls_prof.js")}}" > </script>

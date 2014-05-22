@@ -1,0 +1,52 @@
+{%block cours_matieres%}
+<div id="div_evolution" class="" style="">
+
+<div id="" class="prog_chaque_matrs" style="">
+إعدادات الدروس
+</div>
+<div>
+<div id="matrs">
+{{ render(controller("InnovitProfilBundle:Menu:matCours")) }}
+</div> 
+
+<div id="cours">
+	<div id="titre_cours" class="">
+    :لائحة الدروس
+	</div>
+
+
+ 
+	<div id="espace_cours">
+<div id="espace_cours_debut">إختر المادة أعلاه</div>	
+
+
+</div>
+
+</div>  
+
+
+
+
+</div>
+	<script  src="{{asset("scripts/mtrs_cours.js")}}" ></script>
+</div>
+	
+	<script>
+		var lk2="http://127.0.0.1/remi/Symfony/web/app_dev.php/";
+	</script>
+
+	<script>
+		
+			function charger(elt){
+				elt++;
+				$(function() {	$( "#espace_cours" ).load(lk2+"cours/"+elt );});	
+			}
+		
+		/*var cours=new Array("evolution","test","test_rev","demande_rejoint","cours_matieres","mesprofs","messages","paramets","","","information");		
+		$(function() {	$( "#div_droite" ).load(lk2+"profil/special/"+nom_page[0]+".html.twig" );});					
+		function aff(n){$(function() {$( "#div_droite" ).load(lk2+"profil/special/"+nom_page[n]+".html.twig" );});} */
+	</script>
+
+
+
+{%endblock%}

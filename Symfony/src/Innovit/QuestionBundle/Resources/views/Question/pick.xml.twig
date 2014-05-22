@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+	{% set i=1%}
+	{%for q in qs %}
+		<question{{i}}>
+			<question> {{ q.question}}        </question>
+			<reponse1> {{ q.rep1}}		  </reponse1>
+			<reponse2> {{ q.rep2}}		  </reponse2>
+			<reponse3> {{ q.rep3}}		  </reponse3>
+			<reponse4> {{ q.rep4}}		  </reponse4>
+			<reponse>  {{ q.rep}}		  </reponse>
+			<explications> {{q.explications}} </explications>
+		</question{{i}}>
+		{% set i=i+1 %}
+	{% endfor %}
+</questions>

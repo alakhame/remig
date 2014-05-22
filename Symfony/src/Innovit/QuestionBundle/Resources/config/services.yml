@@ -1,0 +1,7 @@
+parameters:
+#    innovit_question.example.class: Innovit\QuestionBundle\Example
+
+services:
+#    innovit_question.example:
+#        class: %innovit_question.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

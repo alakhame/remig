@@ -1,0 +1,65 @@
+<script  src="{{asset("scripts/jquery.js")}}" > </script>
+<div id="" class="" style="">
+
+	<div id="" class="prog_chaque_matrs" style="">
+اختبار للمراجعة
+	</div>
+	
+
+<div id="matrs_rev">
+<div id="" class="" style="margin-top:20px;margin-right:30px">
+:اختر مادة المراد مراجعتها
+</div>	
+	{{ render(controller("InnovitProfilBundle:Menu:matieresRev")) }}
+</div>  	
+<script>function afftest(){document.getElementById('matrs_rev').style.display="none";document.getElementById('test_rev').style.display="block"}</script>	
+	
+	<div id="test_rev" class="" style="display:none">
+		<div id="question_tete" class="" style="">
+		<div id="question_tete_num" style=""><span id="num_question">0</span> السؤال رقم </div>
+			<div id="img_quest" class="" style="">
+		<img class="" src="{{asset("images/png/128px/Shape 62.png")}}" style="width:100%"/>
+		</div>
+		<div id="question" class="" style="">
+		ما هي اطول سورة في القرآن؟
+		</div>
+		
+	
+		
+		</div>
+		
+		<div id="liste_rep" class="" style="position:relative">
+		<div id="reponse_tet" style="">الإجابات</div>
+		<div id="rep1" class="reponse" onclick="javascript: caucher(1)" style="">
+	    <div id="" class="text_rep"   style="">ما هي اطول سورة في القرآن؟</div>
+		<div class="check_rep"  style=""> <input id="chek1"  type="checkbox" name="option1" value="Milk"> </div>
+		</div>
+		<div id="rep2" class="reponse" onclick="javascript: caucher(2)" style="">
+		<div id="" class="text_rep"   style="">ما هي اطول سورة في القرآن؟</div>
+		<div  class="check_rep"  style=""> <input id="chek2" type="checkbox" name="option1" value="Milk"> </div>
+		</div>
+		<div id="rep3" class="reponse" onclick="javascript: caucher(3)" style="">
+		<div id="" class="text_rep"   style="">ما هي اطول سورة في القرآن؟</div>
+		<div  class="check_rep"  style=""> <input id="chek3" type="checkbox" name="option1" value="Milk"> </div>
+		</div>
+		<div id="rep4" class="reponse" onclick="javascript: caucher(4)" style="margin-bottom:20px">
+		<div id="" class="text_rep"   style="">ما هي اطول سورة في القرآن؟</div>
+		<div  class="check_rep"  style=""> <input id="chek4" type="checkbox" name="option1" value="Milk"> </div>
+		</div>
+		</div>
+		
+		<div id="test_bottom" class="" style="">
+	
+		<div id="progression_question"  style="">
+		<div id="progression_question_bar" style="">		</div>
+		<div id="span_num_quest" >15 السؤال 0 من أصل</div>
+		</div> 
+		<div id="valider" class="" style="" onclick="javascript:nextQuestion()">التالي</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+<script  src="{{asset("scripts/script_test.js")}}" > </script>

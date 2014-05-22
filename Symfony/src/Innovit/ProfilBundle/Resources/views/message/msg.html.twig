@@ -1,0 +1,20 @@
+{% set i=0 %}
+{% for m in msg %}	
+	<div id="message_envoyer{{i}}" class="message" style="">
+	<div class="entete_message" style="">
+	<div id="masquer_envoyer{{i}}" class="btn_masqu_ctn_mess" style="" onclick="javascript:masquerlemessage_envoyer({{i}})">إخفاء</div>
+	<div id="afficher_envoyer{{i}}" class="btn_affich_ctn_mess" style="" onclick="javascript:afficherlemessage_envoyer({{i}})">إقرء الرسالة</div>
+	<div class="nom_entete_message" style="">De: {{ render(controller("InnovitProfilBundle:Message:nameById",{'id':m.idExp} )) }} </div>
+	<div class="image_entete_message" style=""><img id="" src="{{asset("images/user_icon.png")}}" style="width:100%"/></div>
+	<div class="effacer_ce_message" title="Effacer ce message" style="">مسح</div>
+	</div >
+	<div id="contenu_message_glo_envoyer{{i}}" class="contenu_message_glo" style="">
+	<div class="tri_contenu_message_glo" style=""></div>
+	<div class="objet_contenu_message_glo" style="">   {{ m.objet }} :الموضوع</div> 
+	<div class="text_contenu_message_glo"  id="contenu_message_envoyer{{i}}"  style="">	
+		{{ m.contenu }}
+	</div>
+	</div>
+	</div>
+	{% set i=i+1 %}
+{% endfor %}

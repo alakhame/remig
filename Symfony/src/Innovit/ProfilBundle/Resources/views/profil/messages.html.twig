@@ -1,0 +1,70 @@
+﻿	
+	<div id="div_messages" class="" style="">
+	<div class="prog_chaque_matrs" id="" style="">
+الرسائل
+</div>
+	<form action="{{ path('sendNew') }}" method="post"  >
+		<div id="message1" class="" style="" >
+			
+			<div id="message_entet1" class="" style="" onclick="javascript: toggelf(1)">
+				<div id="titre_message1" class="" style="" >
+					أرسل رسالة جديدة
+				</div>
+				<div id="image_message1" class="" style="">
+					<img id="image_messagei1" src="{{asset("images/fleche2.png")}}" style="width:100%"/>
+				</div>
+			</div>
+			
+			
+			<div id="elements_message1" class="" style="background:white;">
+				<div style="width:90%;margin:auto">
+					<input id="messager-nous_contenu_nom_prenom" style=""  placeholder="الإسم الكامل" type="text" name="nom"></input>
+					<input id="messager-nous_contenu_objet" style=""  placeholder="الموضوع" type="text" name="objet"></input>	
+					<textarea id="messager-nous_contenu_message" style="" placeholder="السالة" name="message" ></textarea>
+					<input id="messager-nous_contenu_Envoyer" style=""  value="أرسل" type="submit" name="Evoyer"></input>
+				</div>
+			</div>
+		
+		</div>
+		
+	</form>
+		
+		<div id="message2" class="" style="">
+			<div id="message_entet2" class="" style="" onclick="javascript: toggelf(2)">
+				<div id="image_message2" class="" style="" >
+					<img id="image_messagei2" src="{{asset("images/fleche2.png")}}" style="width:100%"/>
+				</div>
+				
+				<div id="titre_message2" class="" style="" >
+					الرسائل الواردة
+				</div>
+				
+			</div>
+			
+			
+			<div id="elements_message2" class="elements_message" style="">
+				<div style="width:100%;margin:auto">
+					{{ render(controller("InnovitProfilBundle:Message:recus")) }} 
+				</div>
+			</div>
+		</div>
+	
+	<div id="message3" class="" style="">
+			<div id="message_entet3" class="" style="" onclick="javascript: toggelf(3)">
+				<div id="titre_message3" class="" style="" >
+					الرسائل المرسلة
+				</div>
+				<div id="image_message3" class="" style="" >
+					<img id="image_messagei3" src="{{asset("images/fleche2.png")}}" style="width:100%"/>
+				</div>
+			</div>
+			
+			
+			<div id="elements_message3" class="elements_message" style="">
+				<div style="width:100%;margin:auto">
+					{{ render(controller("InnovitProfilBundle:Message:send")) }} 
+				</div>
+			</div>
+		</div>
+	
+<script  src="{{asset("scripts/script_messages.js")}}" > </script>

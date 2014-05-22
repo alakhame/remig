@@ -1,0 +1,6 @@
+# src/Sdz/BlogBundle/Resources/config/routing.yml
+
+
+HelloTheWorld:
+    path:     /hello-world
+    defaults: { _controller: SdzBlogBundle:Blog:index }

@@ -1,0 +1,102 @@
+{% extends 'InnovitProfilBundle:Profil:Layoutprofil.php.twig' %}
+{%block corp%}
+		<script  src="{{asset("scripts/jquery.js")}}" > </script>
+		
+		<script>
+			var lk='http://127.0.0.1/remi/Symfony/web/app_dev.php/profil/special/';
+		</script>
+
+		
+							
+		<div id="div_globale">	
+		
+		<div id="div_droite" class="" style="">	
+		
+		<div id="" class="rubrique" style="">
+		<div id="" class="petit-tri" style=""></div>
+		<div id="" class="rubrique_case" style="">
+		صفحة
+		</div>
+
+		<div id="" class="rubrique_temp" style="">
+		15/06/2014 16:24
+		</div>
+		</div>	
+		
+		<div id="div_droite_load" class="" style="">	
+        </div>		
+		</div>	
+		
+		
+		<div id="div_gauche_liste" class="" style="">
+		
+		
+		
+        <div id="div_gauche_liste_profil" class="" style="">
+		<div class="div_gauche_liste_profil_titre" style="">القائمة</div>
+		{% set i = 0 %}
+		{% for article in articles %}
+		{% set i = i+1 %}
+			<div id="case_liste_{{i}}" class="case" style="" onclick="javascript:aff({{i-1}})">        
+					<div id="trai_{{i}}" class="trai" style=""></div>
+					<div id="informer{{i}}" class="informer">{{i}}
+	 		        </div>
+					<div id="titre_liste{{i}}" class="titre_liste_etudiant">{{article}}
+					</div>
+							
+					<img id="icone_{{i}}" src="{{asset('images/png/32px/Shape'~i~'.png')}}" class="icone"/>
+		    </div>
+		{% endfor %}
+		
+		</div>
+		
+		<div id="div_gauche_liste_parametres" class="" style="">
+		<div class="div_gauche_liste_profil_titre" style="">إعدادات</div>
+			
+		
+		
+			<div id="case_liste_8" class="case" style="" onclick="javascript:aff(7)"> 
+					<div id="trai_8" class="trai" style=""></div>
+					<img id="icone_8" src="{{asset('images/paramts.png')}}" class="icone"/>
+					<div id="titre_liste8" class="titre_liste_etudiant">تعديل المعلومات
+					</div>	
+					<div id="informer8" class="informer"></div>
+		    </div>
+			
+			<div id="case_liste_9" class="case" style="" onclick="javascript:aff(8)"> 
+					<div id="trai_9" class="trai" style=""></div>
+					<img id="icone_9" class="icone" src="{{asset("images/notif.png")}}" />
+					<div id="titre_liste9" class="titre_liste_etudiant">معلوماتي
+					</div>	
+					<div id="informer9" class="informer"></div>
+		    </div>
+			
+			
+			<div id="case_liste_10" class="case" style="" onclick="javascript:aff(1)"> 
+					<div id="trai_10" class="trai" style=""></div>
+					<img id="icone_10" src="{{asset('images/desac.png')}}" class="icone"/>
+					<div id="titre_liste10" class="titre_liste_etudiant">حذف الحساب
+					</div>
+					<div id="informer10" class="informer"></div>
+		    </div>
+	
+		
+		</div>
+		</div>
+	  	 
+
+	<script>
+		var nom_page=new Array("evolution","test","test_rev","demande_rejoint","cours_matieres","mesprofs","messages","paramets","","","information");			
+		$(function() {
+			$( "#div_droite_load" ).load(lk+nom_page[0]+".html.twig" );
+		});					
+		function aff(n){
+			$(function() {
+				$( "#div_droite_load" ).load( lk+nom_page[n]+".html.twig" );
+			});
+		}
+	</script>
+	<script  src="{{asset("scripts/script_liste_etudiant.js")}}" ></script>	
+
+		</div>
+{% endblock %}

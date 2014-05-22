@@ -1,0 +1,41 @@
+<div id="menu" style="width:100%;position:absolute;bottom:0px;background:black">
+<div  style="width:960px;padding-top:10px;padding-bottom:10px;position:relative;margin:auto">	
+	<a id="menu_a_1" href="{{path('innovit_general_homepage',{ name:"Accueil"})}}""><div id="menu_1" style="font-family:Verdana;font-size:0.8em;" >Accueil</div></a>
+	
+	<a id="menu_a_2" href="{{path('innovit_general_homepage',{ name:"qsnous"})}}""><div id="menu_2" style="font-family:Verdana;font-size:0.8em;" >Qui sommes nous?</div></a>
+	
+	<a id="menu_a_3" href="{{path('innovit_general_homepage',{ name:"flashactus"})}}""><div id="menu_3" style="font-family:Verdana;font-size:0.8em;">flash Actus</div></a>
+	
+	<a id="menu_a_4" href="{{path('innovit_general_homepage',{ name:"liensutiles"})}}""><div id="menu_4" style="font-family:Verdana;font-size:0.8em;" >Liens Utiles</div></a>
+	
+	<div id="sing_in" style="font-family:Verdana;font-size:0.8em;" onclick="javascript:affichersingin()" >Sing-in</div>
+		
+</div>
+
+	<div id="div_authentification" >
+	<div style="border-bottom:8px #59407F solid;position:absolute;top:-8px;left:100px;border-right:8px transparent solid;border-left:8px transparent solid;height:0px;width:0px"></div>
+	
+	    <div style="font-size:1.2em;color:white;position:relative">
+		Authentification
+		<div id=""  style="width:10px;height:10px;position:absolute;right:0px;top:0px" onclick="javascript:fermersingin()">
+	    <img src="{{asset("images/fermer.png")}}" style="height:100%;width:100%"/>
+	     </div>
+		</div>
+		<div class="input_authentification">
+			<input  style="" class="input"  placeholder="Login " type="text" >
+			</input>
+		</div>
+		<div class="input_authentification">
+			<input  style="" class="input"  placeholder="Mot de passe " type="text">
+			</input>
+		</div>
+		<div class="input_authentification" style="width:100px;margin:auto;margin-top:10px">
+			<input  style="" class="" value="Connexion"  placeholder="Login " type="submit" >
+			</input>
+		</div>
+		 <div style="font-size:0.8em;color:white;color:#FF9900;margin-top:10px">Mot de passe oublié</div>
+	</div>
+	<script>
+	function affichersingin(){document.getElementById("div_authentification").style.display="block"}
+	function fermersingin() {document.getElementById("div_authentification").style.display="none"}</script>
+</div>

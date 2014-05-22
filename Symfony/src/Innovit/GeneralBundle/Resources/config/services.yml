@@ -1,0 +1,7 @@
+parameters:
+#    innovit_general.example.class: Innovit\GeneralBundle\Example
+
+services:
+#    innovit_general.example:
+#        class: %innovit_general.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

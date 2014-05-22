@@ -1,0 +1,97 @@
+{% extends 'InnovitProfilBundle:Profil:Layoutprofil.php.twig' %}
+{%block corp%}
+		<script  src="{{asset("scripts/jquery.js")}}" > </script>
+		
+
+		
+							
+		<div id="div_globale">	
+		
+		
+		<div id="div_droite" class="" style="">	
+		
+		<div id="" class="rubrique" style="">
+		<div id="" class="petit-tri" style=""></div>
+		<div id="" class="rubrique_case" style="">
+		صفحة
+		</div>
+
+		<div id="" class="rubrique_temp" style="">
+		15/06/2014 16:24
+		</div>
+		</div>	
+		
+		<div id="div_droite_load" class="" style="">	
+        </div>		
+		</div>		
+		
+		
+	
+		<div id="div_gauche_liste" class="" style="">
+
+        <div id="div_gauche_liste_profil" class="" style="">
+		<div class="div_gauche_liste_profil_titre" style="">القائمة</div>
+		{% set i = 0 %}
+		{% for article in articles %}
+		{% set i = i+1 %}
+			<div id="case_liste_{{i}}" class="case" style="" onclick="javascript:aff({{i-1}})">        
+					<div id="trai_{{i}}" class="trai" style=""></div>
+					<div id="informer{{i}}" class="informer">{{i}}
+	 		        </div>
+					<div id="titre_liste{{i}}" class="titre_liste_etudiant">{{article}}
+					</div>	
+					<img id="icone_{{i}}" src="{{asset('images/png/32px/Shape0'~i~'.png')}}" class="icone"/>
+		    </div>
+		{% endfor %}
+		
+		</div>
+		
+		<div id="div_gauche_liste_parametres" class="" style="">
+		<div class="div_gauche_liste_profil_titre" style="">إعدادات</div>
+			
+		
+		
+			<div id="case_liste_5" class="case" style="" onclick="javascript:aff(4)"> 
+					<div id="trai_5" class="trai" style=""></div>				
+					<img id="icone_5" src="{{asset('images/paramts.png')}}" class="icone"/>
+					<div id="informer5" class="informer"></div>
+					<div id="titre_liste5" class="titre_liste_etudiant">تعديل المعلومات
+					</div>	
+					
+		    </div>
+			
+		
+			<div id="case_liste_6" class="case" style="" onclick="javascript:aff(5)"> 
+					<div id="trai_6" class="trai" style=""></div>
+					<img id="icone_6" class="icone" src="{{asset("images/notif.png")}}" />
+					<div id="informer6" class="informer"></div>
+					<div id="titre_liste6" class="titre_liste_etudiant">معلوماتي
+					</div>
+					
+		    </div>
+			
+				<div id="case_liste_7" class="case" style="" onclick="javascript:aff(6)"> 
+					<div id="trai_7" class="trai" style=""></div>
+					<img id="icone_7" src="{{asset('images/desac.png')}}" class="icone"/>
+					<div id="informer7" class="informer"></div>
+					<div id="titre_liste7" class="titre_liste_etudiant">حذف الحساب
+					</div>
+				
+		    </div>
+	
+		
+		</div>
+		</div>
+	    
+
+	<script>
+	var lki='http://127.0.0.1/remi/Symfony/web/app_dev.php/profil/special/';
+	var nom_page_prof=new Array("test_prof","mesetudiants","demande_ajout","messages","paramets","information","","","","");		
+    $(function() {	$( "#div_droite_load" ).load(lki+nom_page_prof[0]+".html.twig" );});			
+	function affinfo(){$(function() {$( "#div_droite_load" ).load(lki+"paramets.html.twig" );});}	
+	function aff(n){$(function() {$( "#div_droite_load" ).load(lki+nom_page_prof[n]+".html.twig" );});}
+	</script>
+	<script  src="{{asset("scripts/script_liste_prof.js")}}" ></script>	
+
+		</div>
+{% endblock %}

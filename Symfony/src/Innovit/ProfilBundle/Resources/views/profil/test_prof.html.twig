@@ -1,0 +1,59 @@
+<div id="parametres" class="" style="">
+	<div id="" class="prog_chaque_matrs" style="">
+		إختبار
+	</div>
+	<form action="http://127.0.0.1/remi/Symfony/web/app_dev.php/sendquest" method="post" >
+	<div class="inputs_test_pr" class="" style="">
+			
+		<div id="" class="" style="margin-bottom:20px;text-decoration:underline">
+			إظافة سؤال جديد
+		</div>
+		<div>			
+		<div id="" class="" style="width:40%;display:inline-block">
+			إختيار المتوى
+		</div>
+		
+		<div id="" class="" style="width:40%;display:inline-block;margin-left:19%">
+			إختيار المادة
+		</div>
+		
+		</div>
+		<div>
+		<select  id="choix_niveau_test" name="choix_cours">
+							<option value="1">Choix 1</option>
+							<option value="2">Choix 2</option>
+							<option value="3">Choix 3</option>
+							<option value="4">Choix 4</option>
+		</select>
+		
+		<select  id="choix_matr_test" name="choix_matr">
+							<option value="1">الرياضيات</option>
+							<option value="2">علوم الحياة و الأرض</option>
+							<option value="3">الفزياء و الكمياء</option>
+							<option value="4">التاريخ</option>
+							<option value="5">الفرنسية</option>
+		</select>
+		</div>
+	
+			<textarea class="textarea_test" placeholder="السؤال" name="question" class="input_test_pr" style=""></textarea></br> 
+			<textarea class="textarea_test" placeholder="التعليل" name="justification" class="input_test_pr" style=""></textarea></br> 
+			<input class="input_test_pr" style="" name="rep1"  placeholder="الإجابة1 الصحيحة" type="text" ></input></br> 
+			<input class="input_test_pr" style="" name="rep2"  placeholder="الإجابة2" type="text" ></input></br> 
+			<input class="input_test_pr" style="" name="rep3"  placeholder="الإجابة3" type="text" ></input></br>  
+			<input class="input_test_pr" style="" name="rep4"  placeholder="الإجابة4" type="text" ></input></br>  
+					
+			<div id="btn_insc" style="">
+				<input  style="" value="أضف"  placeholder="Login " type="submit" ></input>
+			</div>
+		</form>
+	</div>
+	
+	
+	
+		<div id="mes_questions" class="" style="">
+		{{ render(controller("InnovitProfilBundle:Testprof:chargerquest")) }} 
+	
+		</div>
+	
+	<script  src="{{asset("scripts/script_quests_prof.js")}}" > </script>
+</div>

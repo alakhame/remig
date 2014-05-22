@@ -1,0 +1,29 @@
+innovit_profil_load:
+    pattern:  /profil/special/{page}
+    defaults: { _controller: InnovitProfilBundle:Profil:load }
+innovit_profil:
+    pattern:  /profil/{type}/{id}
+    defaults: { _controller: InnovitProfilBundle:Profil:index,id:4 }
+    requirements: 
+        type: etudiant|prof	
+innovit_profil:
+    pattern:  /profil/{type}/{id}
+    defaults: { _controller: InnovitProfilBundle:Profil:index,id:4 }	
+innovit_cours_load:
+    pattern:  /cours/{id}
+    defaults: { _controller: InnovitProfilBundle:Menu:coursById }
+sendNew:
+    pattern:  /sendNew
+    defaults: { _controller: InnovitProfilBundle:Message:sendNew }
+test:
+    pattern:  /test
+    defaults: { _controller: InnovitProfilBundle:Test:bla }
+test_prof:
+    pattern:  /sendquest
+    defaults: { _controller: InnovitProfilBundle:Testprof:sendquest }
+test_modif_prof:
+    pattern:  /modifquest
+    defaults: { _controller: InnovitProfilBundle:Testprof:modifierquest }
+innovit_sendMesg:
+    pattern:  /msg
+    defaults: { _controller: InnovitProfilBundle:SwiftMsg:index }

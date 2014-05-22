@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html id="" class="" lang="ar">
+
+	<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="{{asset("css/css.css")}}" type="text/css" media="screen" />
+	<script  src="{{asset("scripts/jquery.js")}}" > </script>
+	<script  src="{{asset("scripts/script_accueil.js")}}" > </script>	
+	</head>
+	 
+	<body id="body_acc" class="" style="" onscroll="scroll();" >
+		
+		<div id="menu" onmouseover="javascript:aff_menu_vole()" onmouseout="javascript:msq_menu_vole()" style="">
+	
+			<div id="menu_a" style="">	
+			<div id="menu_vol" style=""><div id="tri_vol" style=""></div></div>
+				<div id="menu_a_5" onmouseover="" onclick="javascript:aff_opac(5)"><div id="menu_5" style="">تواصل معنا</div></div>
+				<div id="menu_a_3" onmouseover="" onclick="javascript:aff_actus() ;aff_opac(4)"><div id="menu_3" style="">مستجدات</div></div>
+				<div id="menu_a_2" onmouseover="" onclick="javascript:aff_qsnous() ;aff_opac(3)"><div id="menu_2" style="" >من نحن؟</div></div>
+				<div id="menu_a_4" onmouseover="" onclick="javascript:aff_liens() ;aff_opac(2)"><div id="menu_4" style="" >مواقع مفيدة</div></div>
+				<a href="{{path('innovit_general_homepage')}}"><div id="menu_a_1" onmouseover="" onclick="javascript:aff_opac(1)">
+					<div id="menu_1" style="" > 
+						الرئسية 
+					</div>
+				</div>
+				</a>
+				<div id=""  ><div id="sing_in" style="" ><a style="text-decoration:none;color:white" href="{{path('fos_user_security_login')}}"> تسجيل الدخول </a> </div></div>
+				
+		
+			</div>
+
+
+		</div>
+          
+		<div id="corp_general" style=""> 
+			<div id="Entete_general" style="">
+			    <div id="acc_desous">						
+					<div id="video_tab" style="">
+					<iframe width="100%" height="100%" src="//www.youtube.com/embed/y9Bbk-hICmk?rel=0" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<div id="video_tab_ret" style="">إغلاق</div>
+				</div>
+				
+				
+				<div id="box_g" onmouseover="javascript:aff_scd_play()" onmouseout="javascript:aff_scd_logo()" style="">
+			
+					<div id="logo_general" style="">
+						<img id="logo_image" src="{{asset("images/logo.png")}}" style=""/>
+					</div> 
+					<div id="grand_titre_general" style="">
+						STUDENTS COATCHING
+					</div>  
+				 
+					<div id="grand_text_general" style="">
+						Nouvelle vision d'accompagnement des étudiants pour un avenir educatif solide.
+					</div>
+				 
+					<div id="inscription_bnt" style="">
+					التسجيل
+					</div>
+					
+               				 
+				</div>  
+                 			
+				
+			</div>     
+			<div id="div_globale">	
+				<div id="div_gauche_sep" class="" style="">        
+					<div id="div_gauche_titre" class="" style="">
+						 
+					</div>		 	
+				</div>
+			
+			
+				<div id="inscription" class="" style="">
+				
+					<div id="partie_1_titre">
+						<div id="partie_1_titre_trai">
+						</div>
+						<div id="partie_1_titre_text">
+							حساب جديد
+						</div>
+					</div>
+					<div id="insc" class="" style="">		  
+						<div id="inputs" class="" style="opacity:1">
+						<form action="" method="post" >
+							<div class="input_rs">
+								<input class="input_inscription" style=""  placeholder="الإسم العائلي" type="text" ></input> 
+								<input class="input_inscription" style="margin-top:0px"  placeholder="الإسم الشخصي" type="text" ></input>
+							</div>
+							<div class="input_rs">
+								<input class="input_inscription" style=""  placeholder="تأكيد كلمة السر" type="password" ></input>
+								<input class="input_inscription" style=""  placeholder="كلمة السر" type="password" ></input>
+							</div>
+							<div class="input_rs">
+								<input class="input_inscription" style=""  placeholder="مدينتك" type="text" ></input>  
+								<input class="input_inscription" style=""  placeholder="مدرستك" type="text" ></input>
+							</div>
+							<div class="input_rs">
+								<input class="input_inscription" style=""  placeholder="بريدك ألإلكتروني" type="text" ></input>
+								<div class="input_inscription inp_nn_inp">
+									<select id="choix_niveau">
+									<option class="options">المستوى السادس إبتدائي</option>
+									</select>
+								</div>
+							</div>
+							<div class="input_rs">
+								<input id="num_nat" class="input_inscription" " style=""  placeholder="الرقم الوطني/رقم التأجير" type="text" ></input>
+								<div id="choix_type" class="input_inscription inp_nn_inp">
+									<input type="radio" name="frites" value="oui" id="case1" checked="checked" /> <label for="oui">تلميذ</label>
+									<input type="radio" name="frites" value="non" id="case2" /> <label for="non">أستاذ</label>
+								</div>
+							</div>
+					
+					
+							<div id="btn_insc" style="">
+								<input id="btn_insc_btn"  style="" value="التسجيل"  placeholder="تسجيل" type="submit" ></input>
+							</div>
+					
+						</form>
+						</div>
+				
+					</div>
+				</div>
+			
+				<div id="div_qsnou_liens_actus" class="" style="">
+				<div id="div_qsnous" class="div_les_tr" style="">        
+					<div class="qsnous_titre">
+						<div class="qsnous_titre_text">
+						من نحن، وماهو هدفنا؟
+						</div>
+					</div>
+					<div id="div_gauche_qsnous_text1" class="div_gauche_qsnous_text" style="">    
+						نظرا لمجموعة من المشاكل التي تعيق التلاميذ وتحول دون التحضير والاستعداد الجيد للامتحانات والتي شكلت باستمرار مبعث استياء العديد من التلاميذ وذويهم، ووعيا منا بأهمية والدور الكبير الذي أصبحت تلعبه المواقع الإلكترونية في حياة التلميذ تم إنشاء هذا الموقع التربوي من أجل التأطير والتوجيه بعد الوقوف على نقط القوة والضعف عند التلميذ في مختلف المواد المُدرسة، وذلك بمعية أساتذة أكفاء ومتخصصين، ملتزمين بالمشاركة وتحقيق الأهداف والنتائج
+	
+
+						</br> وفي نفس الإطار دائما يسهر الموقع على تقديم مجموعة من الخدمات التربوية لفائدة التلميذ بعد القيام بعملية التسجيل واجتياز آختبار أولي، ومن بين هذه الخدمات على سبيل المثال فقط لا الحصر ما يلي 
+
+						<div class="liste_al">.تسطير برنامج عمل لفائدة التلميذ بعد تحديد مستواه الحقيقي </div>
+						<div class="liste_al">.تحسين القدرات لدى التلميذ </div>
+
+						<div class="liste_al">.ربط قنوات التواصل بين التلميذ والأساتذة لما لذلك من أهمية </div>
+						<div class="liste_al">.تقديم التأطير والمواكبة من طرف أساتذة أكفاء ومتخصصين </div>
+						<div class="liste_al">.التتبع والتقييم </div>
+						<div class="liste_al">.اقتراح اختبارات إضافية في مختلف المواد من اجل التمكن </div>
+						<div class="liste_al">.اقتراح العديد من المواد التي تناسب مستوى التلميذ من اجل تقوية معارفه </div>
+
+					</div>
+		
+				</div>
+				
+				<div id="div_actus" class="div_les_tr" style="">        
+					<div class="qsnous_titre">
+						<div class="qsnous_titre_text">
+						مستجدات
+						</div>
+					</div>
+					<div id="div_actus_ctn" class="div_gauche_qsnous_text" style="">    
+						
+					</div>
+
+		
+				</div>
+				
+				<div id="div_liens" class="div_les_tr" style="">        
+					<div class="qsnous_titre">
+						<div class="qsnous_titre_text">
+						مواقع مفيدة
+						</div>
+					</div>
+					<div id="liens_text">
+					مواقع إلكترونية مفيدة، تهم التوجيه والتأطير المدرسي، الدروس و التقويم بالإضافة الى منتديات لتواصال وتبادل الآراء مع الآخرين
+					</div>
+					<div id="div_liens_ctn" class="" style="">    
+						<div id="div_liens_ctn_1" class="div_liens_ctn_i"><img src="{{asset("images/orient.png")}}" id="" style="height:100%;width:100%;"/></div>
+						<div id="div_liens_ctn_2" class="div_liens_ctn_i"><img src="{{asset("images/book.png")}}" id="" style="height:100%;width:100%;"/></div>
+						<div id="div_liens_ctn_3" class="div_liens_ctn_i"><img src="{{asset("images/forum.png")}}" id="" style="height:100%;width:100%;"/></div>
+					</div>
+					
+					<div id="div_liens_ctn_desc_titre" class="div_gauche_qsnous_text_desc_titre" style="">    
+						<div id="div_liens_ctn_1_desc_titre" class="div_liens_ctn_i_desc_titre"><span class="span_tit">مواقع التوجيه</span><img src="{{asset("images/rub.png")}}" class="rub" style=""/></div>
+						<div id="div_liens_ctn_2_desc_titre" class="div_liens_ctn_i_desc_titre"><span class="span_tit">مواقع الدروس</span><img src="{{asset("images/rub.png")}}" class="rub" style=""/></div>
+						<div id="div_liens_ctn_3_desc_titre" class="div_liens_ctn_i_desc_titre"><span class="span_tit">منتديات مدرسية</span><img src="{{asset("images/rub.png")}}" class="rub" style=""/></div>
+					</div>
+					
+					
+				</div>
+				
+					<div id="glob_cercl" style="">
+						<div id="cercle1" class="cercles" style=""></div>
+						<div id="cercle2" class="cercles" style=""></div>
+						<div id="cercle3" class="cercles" style=""></div>
+					</div>
+				
+				</div>	
+			
+					
+				
+			</div>
+		</div>
+	
+		<div id="footer_g" style="">
+			<div id="partie_5_contactez_nous" class="partie_5_ctn">
+<form action="traitement/traitement_message.php" method="post" enctype="multipart/form-data">
+<div id="partie_5_contactez_nous_titre" class="partie_5_ctn">
+تواصل معنا
+</div>
+<div style="margin-top:20px">
+<div style="margin-right:2.7%" class="input_authentification">
+	<input  style="" class="input"  placeholder="الإسم الكريم" type="text" id="username" name="nom" required="required" ></input>
+</div>
+
+<div style="" class="input_authentification">
+	<input  style="" class="input"  placeholder="بريدك الإلكتروني" type="email" id="username" name="mail" required="required" ></input>
+</div>
+</div>
+<div style="margin-top:30px" class="">
+	<textarea  style="" class="input_message"  placeholder="الرسالة" type="text" id="username" name="message" required="required" ></textarea>
+</div>
+
+<div  id="div_btn_env"><input id="btn_env" style=""  value="أرسل" type="submit" name="Evoyer"></input></div>
+
+
+<div id="contacter_nous_footer">
+
+
+
+</div>
+
+</div>
+</form>
+	<div id="scroll_haut_div"><div id="scroll_haut"><div id="tri_scroll_haut"></div></div></div>
+		</div>
+	</div>
+				
+	</body>
+	
+
+	<!--<script>
+	var lk='http://localhost/remi/Symfony/web/app_dev.php/general/special/';
+		var nom_page=new Array("accueil","login");			
+						
+		function aff_g(n){
+			$(function() {
+				$( "#corp_general" ).load( lk+nom_page[n]+".html.twig" );
+			});
+		}
+	</script> -->
+</html>

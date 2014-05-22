@@ -1,0 +1,15 @@
+innovit_general_homepage:
+    pattern:  /general/{name}
+    defaults: { _controller: InnovitGeneralBundle:General:Accueil, name:Accueil }
+    requirements:
+        name: qsnous|flashactus|Accueil|liensutiles|login
+innovit_general_load:
+    pattern:  /general/special/{page}
+    defaults: { _controller: InnovitGeneralBundle:General:load }
+innovit_general_relog:
+    pattern:  /relog
+    defaults: { _controller: InnovitGeneralBundle:General:relog }
+innovit_redirection:
+    pattern:  /general/redirection
+    defaults: { _controller: InnovitGeneralBundle:General:redirection }
+    

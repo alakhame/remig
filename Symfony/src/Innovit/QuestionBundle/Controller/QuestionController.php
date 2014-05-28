@@ -14,7 +14,14 @@ class QuestionController extends Controller
     public function pickAction($tnq)
     {	 
 		$doctrine = $this->getDoctrine();
-		$q=$doctrine->getRepository('InnovitProfilBundle:Question')->findBy(array('idCours'=>'2')); 
+		$rep=$doctrine->getRepository('InnovitProfilBundle:Question'); 
+		
+		$query = $rep->createQueryBuilder('q')
+					
+			->getQuery();
+
+		$q= $query->getResult();
+		
 		//$response = new Response($q->getRep());
 	//return $response;
 		//$response->headers->set('Content-Type', 'text/xml');

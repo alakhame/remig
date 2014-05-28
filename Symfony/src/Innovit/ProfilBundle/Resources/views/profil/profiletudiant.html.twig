@@ -3,7 +3,7 @@
 		<script  src="{{asset("scripts/jquery.js")}}" > </script>
 		
 		<script>
-			var lk='http://127.0.0.1/remi/Symfony/web/app_dev.php/profil/special/';
+			var lkp='http://localhost/remig/Symfony/web/app_dev.php/profil/special/';
 		</script>
 
 		
@@ -19,7 +19,7 @@
 		</div>
 
 		<div id="" class="rubrique_temp" style="">
-		15/06/2014 16:24
+		31/05/2014 9:20
 		</div>
 		</div>	
 		
@@ -88,11 +88,11 @@
 	<script>
 		var nom_page=new Array("evolution","test","test_rev","demande_rejoint","cours_matieres","mesprofs","messages","paramets","","","information");			
 		$(function() {
-			$( "#div_droite_load" ).load(lk+nom_page[0]+".html.twig" );
+			$( "#div_droite_load" ).load(lkp+nom_page[0]+".html.twig" );
 		});					
 		function aff(n){
 			$(function() {
-				$( "#div_droite_load" ).load( lk+nom_page[n]+".html.twig" );
+				$( "#div_droite_load" ).load( lkp+nom_page[n]+".html.twig" );
 			});
 		}
 	</script>

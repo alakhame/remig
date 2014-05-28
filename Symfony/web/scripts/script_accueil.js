@@ -56,8 +56,8 @@ document.getElementById('cercle'+2).style.opacity="1";
 
 } 
  
-function aff_scd_play(){document.getElementById('logo_image').src="/remi/Symfony/web/images/play.png";}
-function aff_scd_logo(){document.getElementById('logo_image').src="/remi/Symfony/web/images/logo.png";}
+function aff_scd_play(){document.getElementById('logo_image').src="/remig/Symfony/web/images/play.png";}
+function aff_scd_logo(){document.getElementById('logo_image').src="/remig/Symfony/web/images/logo.png";}
  
    function getScrollPosition()
 {

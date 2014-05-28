@@ -1,17 +1,34 @@
 <script  src="{{asset("scripts/jquery.js")}}" > </script>
-<div id="" class="" style="">
+	<div id="" class="" style="">
 
-	<div id="" class="prog_chaque_matrs" style="">
-		اختبار المستوى
-	</div>
+		<div id="" class="prog_chaque_matrs" style="">
+			اختبار المستوى
+		</div>
 
 		<div id="test_niv" class="" style="">
 			<div class="question_tete_num" id="question_tete_num" style=""><span id="num_question">0</span> السؤال رقم </div>
-				{{ render(controller('InnovitQuestionBundle:Question:pick',{tnq:4})) }}
+			<form>
+			{{ render(controller('InnovitQuestionBundle:Question:pick',{tnq:15})) }}
+	       
+			<div id="test_bottom" class="test_bottom" style="">
+
+				<div id="progression_question"  class="progression_question" style="">
+					<div id="progression_question_bar" class="progression_question_bar" style="">	</div>	
+					<div id="span_num_quest" class="span_num_quest"> السؤال 0 من أصل</div>
+				</div>	
+				
+			</div> 
+			
 		
+			<div id="valider" name="" class="valider" style="" onclick="javascript:nextQuestion()">التالي</div>
+			<div id="sub_quest" name="sub" class="valider"   > Send </div>
+			</form>
 		</div>
 	
-</div>
+	</div>
+	
+
+
 
 
 <script  src="{{asset("scripts/xhrCreate.js")}}" > </script>

@@ -1,8 +1,7 @@
-<form>
 {% set i=1 %}
 {% for q in qs %}
 	
-	<div id="q_{{i}}"  >
+<div id="q_{{i}}" >
 
 	<div id="img_quest_{{i}}" class="img_quest" style="">
 		<img class="" src="{{asset("images/png/128px/Shape 62.png")}}" style="width:100%"/>
@@ -17,41 +16,29 @@
 
 		<div id="reponse_tet_{{i}}" class="reponse_tet" style="">الإجابات</div>
 		
-		<div id="rep1_{{i}}" class="reponse rep1" style="">
+		<div id="rep1_{{i}}" onclick="javascript: caucher({{i}},1)" class="reponse rep1" style="">
 			<div id="" class="text_rep"   style="">{{q.rep1}}</div>
-			<div id="" class="check_rep"  style=""> <input type="checkbox" name="option1" value="Milk"> </div>
+			<div id="" class="check_rep"  style=""> <input id="chek{{i}}_1" type="checkbox" name="option1" value="Milk"> </div>
 		</div>
 			
-		<div id="rep2_{{i}}" class="reponse" style="">
+		<div id="rep2_{{i}}" onclick="javascript: caucher({{i}},2)" class="reponse" style="">
 			<div id="" class="text_rep"   style="">{{q.rep2}}</div>
-			<div id="" class="check_rep"  style=""> <input type="checkbox" name="option1" value="Milk"> </div>
+			<div id="" class="check_rep"  style=""> <input  id="chek{{i}}_2" type="checkbox" name="option1" value="Milk"> </div>
 		</div>
 			
-		<div id="rep3_{{i}}" class="reponse" style="">
+		<div id="rep3_{{i}}" onclick="javascript: caucher({{i}},3)" class="reponse" style="">
 			<div id="" class="text_rep"   style="">{{q.rep3}}</div>
-			<div id="" class="check_rep"  style=""> <input type="checkbox" name="option1" value="Milk"> </div>
+			<div id="" class="check_rep"  style=""> <input id="chek{{i}}_3" type="checkbox" name="option1" value="Milk"> </div>
 		</div>
 			
-		<div id="rep4_{{i}}" class="reponse" style="margin-bottom:20px">
+		<div id="rep4_{{i}}" onclick="javascript: caucher({{i}},4)" class="reponse" style="margin-bottom:20px">
 			<div id="" class="text_rep"   style="">{{q.rep4}}</div>
-			<div id="" class="check_rep"  style=""> <input type="checkbox" name="option1" value="Milk"> </div>
+			<div id="" class="check_rep"  style=""> <input id="chek{{i}}_4" type="checkbox" name="option1" value="Milk"> </div>
 		</div>
 			
 	</div>
-		
-	<div id="test_bottom_{{i}}" class="test_bottom" style="">
-
-		<div id="progression_question_{{i}}"  class="progression_question" style="">
-			<div id="progression_question_bar_{{i}}" class="progression_question_bar" style="">	</div>	
-		</div>	
-		<div id="span_num_quest_{{i}}" class="span_num_quest"> السؤال 0 من أصل</div>
-	</div> 
-
-	<div id="valider_{{i}}" name="{{i}}" class="valider" style="" onclick="javascript:nextQuestion({{i}})">التالي</div>
+</div>		
 	
-	</div>
 	
 	{% set i=i+1 %}
 {% endfor %}
-	<div id="sub_quest" name="sub" class="valider"   > Send </div>
-</form>

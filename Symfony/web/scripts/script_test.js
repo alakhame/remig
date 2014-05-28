@@ -1,7 +1,7 @@
-	var tnq=4;
+	var tnq=15;
 	var pas=612/tnq;
 	var inc=pas,k=1;
-	
+	var mun=1;
 
 	function showQ(num){
 		var o=num-1;
@@ -10,18 +10,18 @@
 	}
 	
 	function init(){
-		for(var o=1;o<=tnq;o++){
+		for(var o=1;o<=100;o++){
 			$("#q_"+o).hide();
 		 }
 		 $("#q_1").show();
 		 $("#sub_quest").hide();
 	}
+	var div1=$("#progression_question");
+	var div2=$("#progression_question_bar");
 	
-	
-	function nextQuestion(num){
+	function nextQuestion(){
 		num=num+1;
-		  var div1=$("#progression_question_"+num);
-		  var div2=$("#progression_question_bar_"+num);
+		  
 		  var div3=$("#span_num_quest");
 		  var div4=$("#num_question");
 		div1.animate({top:'-3px'},400);
@@ -70,7 +70,7 @@
 		},'linear');
 		
 		showQ(num);
-		if(num==tnq)  $("#sub_quest").show();
+		if(num==tnq)  {$("#sub_quest").show();$("#q_"+num).hide();div1.hide();div2.hide()}
 		 
 	}
 	
@@ -100,9 +100,9 @@
 		var rep1=document.getElementById("rep1_a"); */
 		
 		
-function caucher(n){
-for(var i=1; i<5 ;i++){document.getElementById('chek'+i).checked=false };
-document.getElementById('chek'+n).checked=true;  
+function caucher(a,n){
+for(var i=1; i<5 ;i++){document.getElementById('chek'+a+'_'+i).checked=false };
+document.getElementById('chek'+a+'_'+n).checked=true;  
 
 }
 

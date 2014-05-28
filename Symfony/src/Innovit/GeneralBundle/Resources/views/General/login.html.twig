@@ -9,12 +9,13 @@
 	
 	<body id="body_acc" class="" style="" onscroll="scroll();" >
 		<script  src="{{asset("scripts/jquery.js")}}" > </script>
-		 <script  src="{{asset("scripts/script_accueil.js")}}" > </script>	
+		<script  src="{{asset("scripts/script_accueil.js")}}" > </script>	
 		 
 		<div id="menu" onmouseover="javascript:aff_menu_vole()" onmouseout="javascript:msq_menu_vole()" style="">
 		 
 			<div id="menu_a" style="">	
 				<div id="menu_vol" style=""><div id="tri_vol" style=""></div></div>
+				<div id="menu_a_5" onmouseover="" onclick="javascript:aff_opac(5)"><div id="menu_5" style="">تواصل معنا</div></div>
 				<div id="menu_a_3" onmouseover="javascript:dep_menu_vole(3)" onclick="javascript:aff_actus() ;aff_opac(3)"><div id="menu_3" style="">مستجدات</div></div>
 				<div id="menu_a_2" onmouseover="javascript:dep_menu_vole(2)" onclick="javascript:aff_qsnous() ;aff_opac(2)"><div id="menu_2" style="" >من نحن؟</div></div>
 				<div id="menu_a_4" onmouseover="javascript:dep_menu_vole(1)" onclick="javascript:aff_liens() ;aff_opac(4)"><div id="menu_4" style="" >مواقع مفيدة</div></div>
@@ -32,43 +33,38 @@
 
 		</div>
           
-	<div id="div_authentification_glob" >
+		<div id="div_authentification_glob" >
 		
-		<form action="{{ path("fos_user_security_check") }}" method="post">
-		
-			<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+			<form action="{{ path("fos_user_security_check") }}" method="post">
 			
-			<div id="div_authentification" >
+				<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+				<div id="div_authentification_bande" >
+				<div id="div_authentification" >
 		
-				<div id="login_titre">
-					<div id="partie_1_titre_text">
-						المرجو إدخال معلوماتك
-					</div>
-				</div>	
-				<div>
+					<div id="login_titre"><div id="partie_1_titre_text">المرجو إدخال معلوماتك</div></div>	
+					<div>
 					
-				<div style="margin-right:5px" class="input_authentification">
-					<input  style="" class="input"  placeholder="كلمة السر" type="password" id="password" name="_password" required="required"></input>
-				</div>
-					<div style="" class="input_authentification">
-						<input  style="" class="input"  placeholder="اسم التسجيل" type="text" id="username" name="_username" required="required" ></input>
+						<div style="margin-right:5px" class="input_authentification">
+							<input  style="" class="input"  placeholder="كلمة السر" type="password" id="password" name="_password" required="required"></input>
+						</div>
+						<div style="" class="input_authentification">
+							<input  style="" class="input"  placeholder="اسم التسجيل" type="text" id="username" name="_username" required="required" ></input>
+						</div>
+					</div>
+					<div id="remember_me">
+						<label for="remember_me">تذكر هذاالجهاز</label>
+						<input type="checkbox" id="remember_me_c" name="_remember_me" value="on" />
+					</div>
+					<div  class="" style="width:20%;margin:auto;margin-top:30px">	
+						<input id="entrer" style="" class="" value="دخول"  placeholder="Login " type="submit" name="_submit" >
+						</input>
+					</div>
+					<div class="" style="width:65%;margin:auto;margin-top:10px">
+						<div id="mot_de_passe_oubl"style="">نسيت كلمة السر؟</div>
+						<div id="login_inscription" onclick="javascript:aff_g(1)" style="dislpay:inline-block;width:40%"><div id="" style="">التسجيل من هنا</div></div>
 					</div>
 				</div>
-				<div id="remember_me">
-					<label for="remember_me">garder ma session active</label>
-					<input type="checkbox" id="remember_me" name="_remember_me" value="on" />
 				</div>
-				<div  class="" style="width:20%;margin:auto;margin-top:30px">	
-					<input id="entrer" style="" class="" value="دخول"  placeholder="Login " type="submit" name="_submit" >
-					</input>
-				</div>
-				<div class="" style="width:65%;margin:auto;margin-top:10px">
-					<div id="mot_de_passe_oubl"style="">نسيت كلمة السر؟</div>
-					<div id="login_inscription" onclick="javascript:aff_g(1)" style="dislpay:inline-block;width:40%"><div id="" style="">التسجيل من هنا</div></div>
-				</div>
-			</div>
-		</form>
-	</div>
-
-</div>
-</div>
+			</form>
+		</div>
+	</body>
